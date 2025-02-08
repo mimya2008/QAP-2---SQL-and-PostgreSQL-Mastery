@@ -3,7 +3,7 @@ CREATE TABLE students (
     student_first_name TEXT,
     student_last_name TEXT,
     email TEXT,
-    enrollment_date DATE
+    school_enrollment_date DATE
 );
 
 
@@ -27,8 +27,7 @@ CREATE TABLE courses (
 CREATE TABLE enrollments (
     student_id INT REFERENCES students(student_id),
     course_id INT REFERENCES courses(course_id),
-    enrollment_date DATE,
+    course_enrollment_date DATE,
 	PRIMARY KEY (student_id, course_id)
 );
-
 
